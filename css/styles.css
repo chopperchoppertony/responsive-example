@@ -1,0 +1,49 @@
+html{
+    font-family: sans-serif;
+}
+
+.gallery-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero{
+    background-image: url(/beeple-responsive-start/images/composite.jpg);
+    background-size: cover;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2, .hero p{
+    background-color: #919191;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+}
+
+
+
+/*order matters!*/
+/*if the screen is less than 768px wide, run this css*//*TABLET*/
+@media screen and (max-width: 768px){
+    .gallery-images{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*if the screen is less than 480px wide, run this css*//*MOBILE*/
+@media screen and (max-width: 480px){
+    .gallery-images{
+        grid-template-columns: 1fr;
+    }
+}
